@@ -1,6 +1,6 @@
 class Gigasecond 
-  def self.from(input_time) # input_time format: Time.utc(YEAR, MM, DD, HH, mm, SS)
-    Time.at(input_time.to_i + 1000000000)
+  def self.from(input_time)
+    input_time + (10**9)
   end
 end
 
