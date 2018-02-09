@@ -1,5 +1,5 @@
 class Complement
-  DNA_TO_RNA = {
+  DNA_to_RNA = {
     :G => "C",
     :C => "G",
     :T => "A",
@@ -8,7 +8,7 @@ class Complement
   
   def self.of_dna(strand)
     strand.chars.map do |letter| 
-      DNA_TO_RNA.fetch(letter.to_sym)
+      DNA_to_RNA.fetch(letter.to_sym)
     end.join
   rescue KeyError
     ''
