@@ -1,8 +1,8 @@
-class Pangram
+module Pangram
+  ALPHABET = [*'a'..'z']
+
   def self.pangram?(phrase)
-    alphabet = [*'a'..'z']
-    
-    (alphabet - phrase.downcase.chars).empty?
+    (ALPHABET - phrase.downcase.chars).empty?
   end
 end
 
